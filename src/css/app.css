@@ -1,0 +1,180 @@
+/******************************/
+/* Aplication coded by Zuluta */
+/* 2025                       */
+/******************************/
+
+/* variables */
+.zuluta-app {
+    --app-bg-color: #95a9ba;
+    --header-bg-color: #181818;
+    --aside-bg-color: rgba(24, 80, 106, 0.80);
+    --article-bg-color: #262626;
+}
+
+/* reset browser default style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: system-ui;
+    font-size: 16px;
+    background-color: #282828;
+}
+
+body .zuluta-app {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 30px 1fr;
+    grid-template-areas:
+        'header header header'
+        'aside article article';
+    min-width: 1050px;
+    min-height: 100%;
+    padding: 4px;
+    place-content: center;
+    font-size: .8rem;
+    background-color: var(--app-bg-color);
+}
+
+.zuluta-app header {
+    display: grid;
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--app-bg-color);
+    color: #fff;
+    background-color: var(--header-bg-color);
+}
+
+.zuluta-app header .nav-top {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.zuluta-app header .nav-top .title {
+    display: block;
+    width: auto;
+    height: 100%;
+    align-content: center;
+    text-align: left;
+    margin-left: .5rem;
+}
+
+.zuluta-app header .nav-top ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+.zuluta-app header .nav-top ul .link-nav {
+    display: block;
+    width: auto;
+    height: 100%;
+    padding: 0 15px;
+    align-content: center;
+    text-align: center;
+    font-size: .8rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.zuluta-app header .nav-top ul .link-nav:hover {
+    background-color: rgba(149, 169, 186, 0.15);
+}
+
+.zuluta-app header .nav-top ul li .icon-nav {
+    display: block;
+    height: 100%;
+    padding: 0 15px;
+    align-content: center;
+    cursor: pointer;
+}
+
+.zuluta-app header .nav-top ul .icon-nav:hover {
+    background-color: rgba(149, 169, 186, 0.15);
+}
+
+.zuluta-app header .nav-top ul .icon-nav img {
+    display: block;
+    height: 1.15rem;
+}
+
+.zuluta-app header .nav-top .btn-power {
+    display: block;
+    height: 100%;
+    margin-left: 20px;
+    padding: 0 15px;
+    align-content: center;
+    cursor: pointer;
+    background-color: #dc3226;
+}
+
+.zuluta-app header .nav-top .btn-power:hover {
+    background-color: rgba(220, 50, 38, 0.85);
+}
+
+.zuluta-app header .nav-top .btn-power .icon-nav img {
+    display: block;
+    height: 1.3rem;
+}
+
+.zuluta-app aside {
+    display: grid;
+    grid-area: aside;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid var(--app-bg-color);
+    color: #fff;
+    background-color: var(--aside-bg-color);
+}
+
+.zuluta-app aside .nav-left {
+    display: block;
+    padding: 10px;
+}
+
+.zuluta-app aside .nav-left ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.zuluta-app aside .nav-left .btn-nav {
+    display: block;
+    width: 100%;
+    height: 35px;
+    font-size: .85rem;
+    align-content: center;
+    text-align: left;
+    text-indent: .8rem;
+    text-decoration: none;
+    color: #000;
+    border-radius: .15rem;
+    cursor: pointer;
+    background-color: #e9e9ed;
+}
+
+.zuluta-app aside .nav-left .btn-nav:hover {
+    background-color: rgba(233, 233, 233, 0.85);
+}
+
+.zuluta-app article {
+    display: grid;
+    grid-area: article;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: #fff;
+    background-color: var(--article-bg-color);
+}

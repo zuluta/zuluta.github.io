@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuluta App</title>
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="src/css/dictionary-builder.css">
+  </head>
+  <body>
+    <div class="zuluta-app">
+
+      <!-- header -->
+      <header>
+        <nav class="nav-top">
+          <div class="title">ZULUTA APP</div>
+          <ul>
+            <li><a href="#home" class="link-nav">Home</a></li>
+            <li><a href="#contact" class="link-nav">Contact</a></li>
+            <li><a href="#about" class="icon-nav"><img src="src/icons/fontawesome-regular-user.png" alt="Usuario" title="Usuario"></a></li>
+            <div class="btn-power">
+              <a href="#about" class="icon-nav"><img src="src/icons/fontawesome-solid-power-off.png" alt="Salir" title="Salir"></a>
+            </div>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- aside -->
+      <aside>
+        <nav class="nav-left">
+          <ul>
+            <li><a href="dictionary-builder.html" class="btn-nav">Dictionary Builder 1.2.1</a></li>
+            <li><a href="index.html" class="btn-nav">Nuevo APP</a></li>
+            <li><a href="index.html" class="btn-nav">Nuevo APP</a></li>
+            <li><a href="index.html" class="btn-nav">Nuevo APP</a></li>
+            <li><a href="index.html" class="btn-nav">Nuevo APP</a></li>
+            <li><a href="index.html" class="btn-nav">Nuevo APP</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- article -->
+      <article>
+        <div class="dictionary-builder">
+
+          <!-- section-1 -->
+          <section class="section-1"></section>
+
+          <!-- section-2 -->
+          <section class="section-2">
+            <div class="top-side">
+              <div class="dictionary-input-box">
+                <fieldset>
+                  <legend>Entrada diccionario</legend>
+                  <div class="textarea-box">
+                    <input type="text" class="txt-dictionary-input-filter-regex" placeholder="Patrón Regex - Case Sensitive" tabindex="1">
+                    <input type="text" class="txt-dictionary-input-filter" placeholder="Filtrar..." tabindex="2">
+                    <span class="dictionary-input"></span>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="status-box">
+                <label>Filas:</label><span class="dictionary-input-rows"></span>
+                <span class="dictionary-input-rows-origin"></span>
+                <input type="button" class="btn-dictionary-input-cleaner" value="Limpiar">
+              </div>
+            </div>
+
+            <div class="bottom-side">
+              <label for="file-drop" class="drop-container">Arrastra tu diccionario aquí
+                <input type="file" id="file-drop">
+              </label>
+            </div>
+          </section>
+
+          <!-- section-3 -->
+          <section class="section-3">
+            <div class="top-side">
+              <div class="dictionary-output-box">
+                <fieldset>
+                  <legend>Salida diccionario</legend>
+                  <div class="textarea-box">
+                    <input type="text" class="txt-dictionary-output-filter-regex" placeholder="Patrón Regex - Case Sensitive" tabindex="3">
+                    <input type="text" class="txt-dictionary-output-filter" placeholder="Filtrar..." tabindex="4">
+                    <span class="dictionary-output"></span>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="status-box">
+                <label>Filas:</label><span class="dictionary-output-rows"></span>
+                <span class="dictionary-output-rows-origin"></span>
+                <input type="button" class="btn-dictionary-output-cleaner" value="Limpiar">
+              </div>
+            </div>
+
+            <div class="bottom-side">
+              <div class="btn-box">
+                <input type="button" class="btn-dictionary-input-to-output-load" value="Cargar diccionario">
+                <input type="button" class="btn-dictionary-output-save" value="Guardar">
+              </div>
+            </div>
+          </section>
+
+          <!-- section-4 -->
+          <section class="section-4">
+            <label class="file-info"></label>
+            <progress class="generator-progress" value="0" max="100"></progress>
+          </section>
+
+          <!-- section-5 -->
+          <section class="section-5">
+            <div class="panel-box">
+
+              <input type="radio" id="tab-1" class="tab" name="tab-group" checked >
+              <label for="tab-1" class="tab-1" >Generar</label>
+
+              <input type="radio" id="tab-2" class="tab" name="tab-group">
+              <label for="tab-2" class="tab-2" >Agregar</label>
+
+              <input type="radio" id="tab-3" class="tab" name="tab-group">
+              <label for="tab-3" class="tab-3" >Eliminar</label>
+
+              <input type="radio" id="tab-4" class="tab" name="tab-group">
+              <label for="tab-4" class="tab-4" >Reemplazar</label>
+
+              <input type="radio" id="tab-5" class="tab" name="tab-group">
+              <label for="tab-5" class="tab-5" >Convertir</label>
+
+              <input type="radio" id="tab-6" class="tab" name="tab-group">
+              <label for="tab-6" class="tab-6" >Extraer</label>
+
+              <input type="radio" id="tab-7" class="tab" name="tab-group">
+              <label for="tab-7" class="tab-7" >Ordenar</label>
+
+              <!-- tab-1 content -->
+              <section class="panel-1">
+                <div class="top-side">
+                  <fieldset>
+                    <legend>Formato de cadena</legend>
+                    <div class="length-box">
+                      <ul class="col-left">
+                        <li>
+                          <input type="radio" id="x1" class="length" name="length" value="1" checked>
+                          <label for="x1">1</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="x2" class="length" name="length" value="2">
+                          <label for="x2">02</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="x3" class="length" name="length" value="3">
+                          <label for="x3">003</label>
+                        </li>
+                      </ul>
+
+                      <ul class="col-right">
+                        <li>
+                          <input type="radio" id="x4" class="length" name="length" value="4" checked>
+                          <label for="x4">0004</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="x5" class="length" name="length" value="5">
+                          <label for="x5">00005</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="x6" class="length" name="length" value="6">
+                          <label for="x6">000006</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>Rango</legend>
+                    <div class="range-top">
+                      <label for="generator-range-start">Desde:</label>
+                      <input type="text" id="generator-range-start" class="txt-generator-range-start" placeholder="Nº Entero" tabindex="1">
+
+                      <label for="generator-range-end">Hasta:</label>
+                      <input type="text" id="generator-range-end" class="txt-generator-range-end" placeholder="Nº Entero" tabindex="2">
+                    </div>
+
+                    <div class="range-bottom">
+                      <input type="button" class="btn-generator-range-cleaner" value="Limpiar">
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>Agregar</legend>
+                    <div class="add-top">
+                      <label for="generator-add-prefix">Prefijo:</label>
+                      <input type="text" id="generator-add-prefix" class="txt-generator-add-prefix" placeholder="Prefijo" tabindex="3">
+
+                      <label for="generator-add-suffix">Sufijo:</label>
+                      <input type="text" id="generator-add-suffix" class="txt-generator-add-suffix" placeholder="Sufijo" tabindex="4">
+                    </div>
+
+                    <div class="add-bottom">
+                      <input type="button" class="btn-generator-add-cleaner" value="Limpiar">
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="speed">
+                    <legend>Velocidad</legend>
+                    <label class="speed-min">Min</label><label class="sleep-range-value"></label><label class="speed-max">Max</label>
+                    <input type="range" class="sleep-range" min="-900" max="0" step="100" value="0" list="tickmarks">
+
+                    <datalist id="tickmarks">
+                      <option value="-900"></option>
+                      <option value="-800"></option>
+                      <option value="-700"></option>
+                      <option value="-600"></option>
+                      <option value="-500"></option>
+                      <option value="-400"></option>
+                      <option value="-300"></option>
+                      <option value="-200"></option>
+                      <option value="-100"></option>
+                      <option value="0"></option>
+                    </datalist>
+                  </fieldset>
+                </div>
+
+                <div class="bottom-side">
+                  <div class="btn-box">
+                    <input type="button" class="btn-generator-start" value="Start">
+                    <input type="button" class="btn-generator-stop" value="Stop">
+                    <input type="button" class="btn-generator-reset" value="Reset">
+                  </div>
+                </div>
+              </section>
+
+              <!-- tab-2 content -->
+              <section class="panel-2">
+                <div class="top-side">
+
+                  <fieldset>
+                    <legend>Agregar</legend>
+                    <div class="add-top">
+                      <label for="dictionary-add-prefix">Prefijo:</label>
+                      <input type="text" id="dictionary-add-prefix" class="txt-dictionary-add-prefix" placeholder="Prefijo" tabindex="3">
+
+                      <label for="dictionary-add-suffix">Sufijo:</label>
+                      <input type="text" id="dictionary-add-suffix" class="txt-dictionary-add-suffix" placeholder="Sufijo" tabindex="4">
+                    </div>
+
+                    <div class="add-bottom">
+                      <input type="button" class="btn-dictionary-add" value="Start">
+                      <input type="button" class="btn-dictionary-add-cleaner" value="Limpiar">
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="bottom-side">
+                  <div class="btn-box"></div>
+                </div>
+              </section>
+
+              <!-- tab-3 content -->
+              <section class="panel-3">
+                <div class="top-side">
+                  <div class="btn-box">
+                    <input type="button" class="btn-remove-duplicates" value="Eliminar duplicados">
+                    <input type="button" class="btn-remove-empty-rows" value="Eliminar filas vacías">
+                    <input type="button" class="btn-remove-whitespace" value="Eliminar espacios en blanco">
+                    <input type="button" class="btn-remove-letter" value="Eliminar letras">
+                    <input type="button" class="btn-remove-number" value="Eliminar números">
+                    <input type="button" class="btn-remove-special-character" value="Eliminar caracteres especiales">
+                    <input type="button" class="btn-remove-first-character" value="Eliminar primer carácter">
+                    <input type="button" class="btn-remove-last-character" value="Eliminar último carácter">
+                  </div>
+                </div>
+
+                <div class="bottom-side"></div>
+              </section>
+
+              <!-- tab-4 content -->
+              <section class="panel-4">
+                <div class="top-side">
+                  <fieldset>
+                    <legend>Reemplazar</legend>
+                    <div class="replace-top">
+                      <label for="dictionary-replace-origin">Reemplazar:</label>
+                      <input type="text" id="dictionary-replace-origin" class="txt-dictionary-replace-origin" placeholder="Reemplazar" tabindex="5">
+
+                      <label for="dictionary-replace-with">Con:</label>
+                      <input type="text" id="dictionary-replace-with" class="txt-dictionary-replace-with" placeholder="Con" tabindex="6">
+                    </div>
+
+                    <div class="replace-bottom">
+                      <input type="button" class="btn-dictionary-replace" value="Start">
+                      <input type="button" class="btn-dictionary-replace-cleaner" value="Limpiar">
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="bottom-side"></div>
+              </section>
+
+              <!-- tab-5 content -->
+              <section class="panel-5">
+                <div class="top-side">
+                  <div class="btn-box">
+                    <input type="button" class="btn-convert-lowercase" value="Convertir en minúscula">
+                    <input type="button" class="btn-convert-uppercase" value="Convertir en mayúscula">
+                    <input type="button" class="btn-convert-pascalcase" value="Convertir primera letra mayúscula">
+                  </div>
+                </div>
+
+                <div class="bottom-side"></div>
+              </section>
+
+              <!-- tab-6 content -->
+              <section class="panel-6">
+                <div class="top-side">
+                  <fieldset>
+                    <legend>Parsear fila</legend>
+                    <div class="parser-top">
+                      <label for="txt-dictionary-left-parser">Izq.</label>
+                      <input type="text" id="txt-dictionary-left-parser" class="txt-dictionary-left-parser" placeholder="Lado izquierdo" tabindex="5">
+
+                      <label for="txt-dictionary-right-parser">Dcha.</label>
+                      <input type="text" id="txt-dictionary-right-parser" class="txt-dictionary-right-parser" placeholder="Lado derecho" tabindex="6">
+                    </div>
+
+                    <div class="parser-medium">
+                      <label><input type="checkbox" class="parser" name="parser-group">Incluir parser</label>
+                    </div>
+
+                    <div class="parser-bottom">
+                      <input type="button" class="btn-dictionary-parser" value="Start">
+                      <input type="button" class="btn-dictionary-parser-cleaner" value="Limpiar">
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>Fraccionar fila</legend>
+                    <div class="fraction-top">
+                      <label for="dictionary-fraction-separator">Separador:</label>
+                      <input type="text" id="dictionary-fraction-separator" class="txt-dictionary-fraction-separator" placeholder="Separador" tabindex="5">
+
+                      <label for="dictionary-fraction-position">Posición:</label>
+                      <input type="text" id="dictionary-fraction-position" class="txt-dictionary-fraction-position" placeholder="Nº de posición" tabindex="6">
+                    </div>
+
+                    <div class="fraction-bottom">
+                      <input type="button" class="btn-dictionary-fraction" value="Start">
+                      <input type="button" class="btn-dictionary-fraction-cleaner" value="Limpiar">
+                    </div>
+
+                    <blockquote>
+                      <p>1º Ejemplo:</p>
+                      <p>Fila: PARTE 0 | PARTE 1 | PARTE 2</p>
+                      <p>Separador: |</p>
+                      <p>Posición: 0</p>
+                      <p>Resultado: PARTE 0</p>
+                      <br>
+                      <p>2º Ejemplo:</p>
+                      <p>Fila: PARTE 0 | PARTE 1 | PARTE 2</p>
+                      <p>Separador: 1</p>
+                      <p>Posición: 0</p>
+                      <p>Resultado: PARTE 0 | PARTE </p>
+                    </blockquote>
+                  </fieldset>
+                </div>
+                <div class="bottom-side"></div>
+              </section>
+
+              <!-- tab-7 content -->
+              <section class="panel-7">
+                <div class="top-side">
+                  <div class="btn-box">
+                    <input type="button" class="btn-sort-ascending" value="Orden ascendente">
+                    <input type="button" class="btn-sort-descending" value="Orden descendente">
+                    <input type="button" class="btn-sort-random" value="Orden aleatorio">
+                  </div>
+                </div>
+
+                <div class="bottom-side"></div>
+              </section>
+
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+    <script src="src/js/dictionary-builder.js"></script>
+  </body>
+</html>
