@@ -34,7 +34,7 @@ body .zuluta-app {
     grid-template-columns: auto 1fr;
     grid-template-rows: 30px 1fr;
     grid-template-areas:
-        'aside header header'
+        'header header header'
         'aside article article';
     min-width: 1050px;
     min-height: 100%;
