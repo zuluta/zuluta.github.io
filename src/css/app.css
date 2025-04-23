@@ -7,7 +7,7 @@
 .zuluta-app {
     --app-bg-color: #95a9ba;
     --header-bg-color: #181818;
-    --aside-bg-color: #181818;
+    --aside-bg-color: linear-gradient(#181818 75%, #4051b5);
     --article-bg-color: #262626;
 }
 
@@ -135,7 +135,7 @@ body .zuluta-app {
     height: 100%;
     border-right: 1px solid var(--app-bg-color);
     color: #fff;
-    background-color: var(--aside-bg-color);
+    background: var(--aside-bg-color);
 }
 
 .zuluta-app aside .nav-left {
@@ -166,7 +166,7 @@ body .zuluta-app {
 }
 
 .zuluta-app aside .nav-left .btn-nav:hover {
-    background: linear-gradient(#181818 75%, #4051b5);
+    background-color: rgba(233, 233, 233, 0.40);
 }
 
 .zuluta-app article {
