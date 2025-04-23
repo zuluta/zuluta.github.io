@@ -7,7 +7,7 @@
 .zuluta-app {
     --app-bg-color: #95a9ba;
     --header-bg-color: #181818;
-    --aside-bg-color: rgba(24, 80, 106, 0.80);
+    --aside-bg-color: #303c86;
     --article-bg-color: #262626;
 }
 
@@ -31,7 +31,7 @@ body {
 
 body .zuluta-app {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 180px 1fr;
     grid-template-rows: 30px 1fr;
     grid-template-areas:
         'header header header'
