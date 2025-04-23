@@ -158,11 +158,11 @@ body .zuluta-app {
     align-content: center;
     text-align: left;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
     padding: 0 .8rem;
     border-radius: .15rem;
     cursor: pointer;
-    background-color: #e9e9ed;
+    background-color: #585858;
 }
 
 .zuluta-app aside .nav-left .btn-nav:hover {
