@@ -7,7 +7,7 @@
 .zuluta-app {
     --app-bg-color: #95a9ba;
     --header-bg-color: #181818;
-    --aside-bg-color: #303c86;
+    --aside-bg-color: #181818;
     --article-bg-color: #262626;
 }
 
@@ -34,7 +34,7 @@ body .zuluta-app {
     grid-template-columns: auto 1fr;
     grid-template-rows: 30px 1fr;
     grid-template-areas:
-        'header header header'
+        'aside header header'
         'aside article article';
     min-width: 1050px;
     min-height: 100%;
@@ -158,11 +158,11 @@ body .zuluta-app {
     align-content: center;
     text-align: left;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     padding: 0 .8rem;
     border-radius: .15rem;
     cursor: pointer;
-    background-color: #e9e9ed;
+    background-color: #4051b5;
 }
 
 .zuluta-app aside .nav-left .btn-nav:hover {
