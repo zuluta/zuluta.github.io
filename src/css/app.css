@@ -38,7 +38,7 @@ body .zuluta-app {
         'aside article article';
     min-width: 350px;
     min-height: 100%;
-    padding: 4px;
+    padding: 0;
     place-content: center;
     font-size: .8rem;
     background-color: var(--app-bg-color);
