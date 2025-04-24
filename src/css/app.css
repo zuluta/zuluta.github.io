@@ -6,7 +6,7 @@
 /* variables */
 .zuluta-app {
     --app-bg-color: #95a9ba;
-    --header-bg-color: #181818;
+    --header-bg-color: #7a1d1d;
     --aside-bg-color: linear-gradient(#181818 75%, #4051b5);
     --article-bg-color: #262626;
 }
